@@ -52,12 +52,6 @@
   (coerce (subseq string start end) 'string))
 
 
-(defun ~vector-copy! (to at from &optional (start 0) end)
-  (setf (subseq to at)
-        (subseq from start end))
-  to)
-
-
 (#|bytevector
    srfi-4 &...|#)
 
@@ -72,6 +66,10 @@
 
 
 (eval-always
+  (defun ~vector-copy! (to at from &optional (start 0) end)
+    (setf (subseq to at)
+          (subseq from start end))
+    to)
   (define ~make-bytevector #'srfi-4:make-u8vector)
   (define ~bytevector #'srfi-4:u8vector)
   (define ~bytevector? #'srfi-4:u8vector?)

@@ -6,13 +6,13 @@
 (defpackage "https://github.com/g000001/srfi-172"
   (:use
    "https://github.com/g000001/srfi-0"
+   "https://github.com/g000001/srfi-6"
+   "https://github.com/g000001/srfi-11"
    "https://github.com/g000001/srfi-13"
    "https://github.com/g000001/srfi-23"
    "https://github.com/g000001/srfi-39"
    "https://github.com/g000001/srfi-45"
-   "https://github.com/g000001/srfi-6"
    quasiquote1
-   srfi-11
    srfi-16
    srfi-34
    rnrs
