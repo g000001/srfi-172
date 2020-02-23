@@ -70,12 +70,12 @@
     (setf (subseq to at)
           (subseq from start end))
     to)
-  (define ~make-bytevector #'srfi-4:make-u8vector)
-  (define ~bytevector #'srfi-4:u8vector)
-  (define ~bytevector? #'srfi-4:u8vector?)
-  (define ~bytevector-u8-ref #'srfi-4:u8vector-ref)
+  (define ~make-bytevector #'make-u8vector)
+  (define ~bytevector #'u8vector)
+  (define ~bytevector? #'u8vector?)
+  (define ~bytevector-u8-ref #'u8vector-ref)
   (define ~bytevector-length #'cl:length)
-  (define ~bytevector-u8-set! #'srfi-4:u8vector-set!)
+  (define ~bytevector-u8-set! #'u8vector-set!)
   (define ~bytevector-copy! #'~vector-copy!))
 
 
@@ -318,7 +318,7 @@
   (and (weak-pointer-p obj)
        (listp (weak-pointer-value obj))))
 
-
+#||
 (cl:in-package "https://github.com/g000001/srfi-46#internals")
 
 
@@ -346,6 +346,6 @@
 
 
 (cl:defparameter *cl-define-syntax-mstore* (srfi-172-null-mstore))
-
+||#
 
 ;;; *EOF*

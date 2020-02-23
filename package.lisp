@@ -9,14 +9,13 @@
    "https://github.com/g000001/srfi-6"
    "https://github.com/g000001/srfi-11"
    "https://github.com/g000001/srfi-13"
+   "https://github.com/g000001/srfi-16"
    "https://github.com/g000001/srfi-23"
    "https://github.com/g000001/srfi-39"
    "https://github.com/g000001/srfi-45"
    quasiquote1
-   srfi-16
    srfi-34
-   rnrs
-   babel)
+   rnrs)
   (:shadowing-import-from
    "https://github.com/g000001/srfi-45"
    force delay)
@@ -89,7 +88,13 @@
 
 
 (defpackage "https://github.com/g000001/srfi-172#internals"
-  (:use cl srfi-23 srfi-45 tg named-readtables babel)
+  (:use "https://github.com/g000001/srfi-4"
+        "https://github.com/g000001/srfi-23"
+        "https://github.com/g000001/srfi-45"
+        cl
+        tg
+        named-readtables
+        babel)
   (:shadowing-import-from
    "https://github.com/g000001/srfi-172"
    srfi-172-syntax)

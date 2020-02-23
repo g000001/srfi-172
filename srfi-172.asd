@@ -18,18 +18,19 @@ https://srfi.schemers.org/srfi-172"
                named-readtables
                quasiquote1
                srfi-0
-               srfi-45
-               srfi-13
+               srfi-4
                srfi-6
+               srfi-11
+               srfi-13
+               srfi-16
                srfi-23
                srfi-39
+               srfi-46               
                srfi-61
                srfi-87
-               srfi-46
                ;;
-               srfi-11
                srfi-34
-               srfi-16
+               srfi-45
                )
   :components ((:file "package")
                (:file "readtable")
