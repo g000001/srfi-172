@@ -72,7 +72,7 @@
   read-bytevector! read-char read-error? read-line read-string read-u8
   real? real-part remainder reverse round set! set-car! set-cdr! sin
   sqrt square string string?  string<? string<=? string=? string>?
-  string>=? string->list string->number string->symbol string->utf8
+  string>=? string->list string->number string->utf8
   string->vector string-append string-ci<? string-ci<=? string-ci=?
   string-ci>? string-ci>=?  string-copy string-copy! string-downcase
   string-fill! string-foldcase string-for-each string-length
@@ -93,7 +93,7 @@
   (:export
    cond-expand asin char->integer char-whitespace?  square
    eof-object char-ci>?  list->vector char<=?  char>=?  error-object?
-   truncate/ string->symbol quasiquote char-alphabetic?  truncate
+   truncate/ quasiquote char-alphabetic?  truncate
    rational?  not log do cos memq integer?  make-vector eqv?  finite?
    cond truncate-remainder string-map or string-copy char-ci<=?
    append procedure?  string=?  bytevector-u8-ref positive?  for-each
