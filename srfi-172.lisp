@@ -6,18 +6,7 @@
 (in-syntax *srfi-172-internal*)
 
 
-(defmacro eval-always (&body body)
-  `(eval-when (:compile-toplevel :load-toplevel :execute)
-     ,@body))
-
-
 (eval-always
-  (defun srfi-172-prefix (srm chr)
-    (declare (ignore chr))
-    (let ((*package* (find-package
-                      "https://github.com/g000001/srfi-172")))
-      (read srm)))
-  (set-macro-character #\~ #'srfi-172-prefix)
   (setf (macro-function '~letrec*)
         (macro-function '~letrec))
   (setf (macro-function '~delay-force)
@@ -215,7 +204,7 @@
 
 
 (defun ~error-object? (obj)
-  (typep obj 'error))
+  (typep obj 'cl:error))
 
 
 (defun ~error-object-message (obj)
@@ -317,6 +306,7 @@
 (defun ~promise? (obj)
   (and (weak-pointer-p obj)
        (listp (weak-pointer-value obj))))
+
 
 #||
 (cl:in-package "https://github.com/g000001/srfi-46#internals")

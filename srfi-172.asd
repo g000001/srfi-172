@@ -17,6 +17,7 @@ https://srfi.schemers.org/srfi-172"
                float-features
                named-readtables
                quasiquote1
+               babel
                srfi-0
                srfi-4
                srfi-6
@@ -24,14 +25,12 @@ https://srfi.schemers.org/srfi-172"
                srfi-13
                srfi-16
                srfi-23
+               srfi-34
                srfi-39
+               srfi-45
                srfi-46               
                srfi-61
-               srfi-87
-               ;;
-               srfi-34
-               srfi-45
-               )
+               srfi-87)
   :components ((:file "package")
                (:file "readtable")
                (:file "srfi-172")))
